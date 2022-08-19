@@ -20,8 +20,9 @@ from posts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    path('', views.home),
+    # Для POSTS
+    path('', views.home, name='home'),
     path('about/', views.about),
     path('posts/', views.post)
+
 ]
