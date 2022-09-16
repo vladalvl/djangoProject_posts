@@ -13,20 +13,27 @@
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
 
-{#  Кнопка главная страница #}
-        <a class="navbar-brand" href="/static">Django Blog</a>
+<!--{#  Кнопка перехода на главную страницу #}-->
+        <a class="navbar-brand" href="{% url 'home' %}">Django Blog</a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
 
-{#  Кнопка About #}
+
+<!--{#  Кнопка Create #}-->
             <li class="nav-item active">
-                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link" href="{% url 'create_post' %}">Create</a>
             </li>
 
-{#  Кнопка пост #}
+<!--{#  Кнопка About #}-->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+
+<!--{#  Кнопка пост #}-->
              <li class="nav-item">
                 <a class="nav-link" href="/posts">Posts</a>
              </li>
